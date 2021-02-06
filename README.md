@@ -10,4 +10,4 @@
 1. Pull The Repo.
 2. change the image name at docker-compose to match your aws_account-id. 
 2. Add the variables to circleci " prefered to add it as a context "
-3. push your changes at the deploy.sh script will push the image to ecr, create the task definition and run it.
+3. push your changes and the deploy.sh script will create the task definition and run it.
