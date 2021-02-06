@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+  deploy:
+    docker: 
+      - image: 'ishaker/aws-ecscli'
+    steps:
+      - checkout
+      - run:
+          name: Deploy ecs
+          command: |
+            ./deploy.sh
+workflows:
+  version: 2.1
+  app-deploy:
+    jobs:
+      - deploy
